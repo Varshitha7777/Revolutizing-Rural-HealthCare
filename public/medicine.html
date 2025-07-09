@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medicine Suggestions - Rural Healthcare</title>
+
+  <style>
+    body.medicine-page {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      color: #080808;
+      background: url('assets/medicine.png') no-repeat center left fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .medicine-page .container {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 350px;
+      text-align: center;
+      margin-right: calc(50px + 60px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      animation: fadeInCard 1s ease forwards;
+    }
+
+    .medicine-page h2 {
+      color: #636cbf;
+      margin-bottom: 10px;
+      font-size: 2em;
+      font-family: 'Raleway', sans-serif;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      animation: fadeInTop 1s ease forwards;
+    }
+
+    .medicine-page p {
+      font-size: 1em;
+      color: #0a0909;
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+      text-align: left;
+    }
+
+    .medicine-page button {
+      background-color: #636cbf;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      width: 80%;
+      margin-top: 10px;
+    }
+
+    .medicine-page button:hover {
+      background-color: #4a54ae;
+      transform: translateY(-2px);
+    }
+
+    .quote-box {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-style: italic;
+      color: #000000;
+      font-size: 1em;
+      background-color: rgba(255, 255, 255, 0.555);
+      padding: 10px 15px;
+      border-radius: 8px;
+      max-width: 350px;
+      box-shadow: 0 2px 6px rgba(26, 25, 25, 0.454);
+    }
+
+    @keyframes fadeInTop {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInCard {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body class="medicine-page">
+
+  <div class="container">
+    <h2>Suggested Medicines & Home Remedies</h2>
+    <p><strong>🩺 Symptom:</strong> <span id="symptom">Loading...</span></p>
+    <p><strong>💊 Medicine:</strong> <span id="medicine">Loading...</span></p>
+    <p><strong>🌿 Home Remedy:</strong> <span id="homeRemedy">Loading...</span></p>
+
+    <a href="profile.html">
+      <button>💊 Order Medicine</button>
+    </a>
+    <a href="voice.html">
+      <button>🔙 Go Back</button>
+    </a>
+  </div>
+
+  <div class="quote-box">
+    “Bridging rural hearts with smart healthcare.” <br>
+    Simple. Local. Lifesaving.
+  </div>
+
+  <!-- Link external medicine.js script -->
+  <script src="js/medicine.js"></script>
+</body>
+</html>

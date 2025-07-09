@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voice Input - Rural Healthcare</title>
+  <style>
+    body.voice-page {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      color: #080808;
+      background: url('assets/voice.png') no-repeat center left fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .voice-page .container {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 350px;
+      text-align: center;
+      margin-right: calc(50px + 60px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      animation: fadeInCard 1s ease forwards;
+    }
+
+    .voice-page h2 {
+      color: #636cbf;
+      margin-bottom: 10px;
+      font-size: 2em;
+      font-family: 'Raleway', sans-serif;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      animation: fadeInTop 1s ease forwards;
+    }
+
+    .voice-page p,
+    .voice-page select,
+    .voice-page input {
+      font-size: 1em;
+      color: #0a0909;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    .voice-page input,
+    .voice-page select {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .voice-page input:focus,
+    .voice-page select:focus {
+      border-color: #636cbf;
+      outline: none;
+    }
+
+    .voice-page button {
+      background-color: #636cbf;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      width: 80%;
+      margin-bottom: 10px;
+    }
+
+    .voice-page button:hover {
+      background-color: #4a54ae;
+      transform: translateY(-2px);
+    }
+
+    .quote-box {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-style: italic;
+      color: #000000;
+      font-size: 1em;
+      background-color: rgba(255, 255, 255, 0.555);
+      padding: 10px 15px;
+      border-radius: 8px;
+      max-width: 300px;
+      box-shadow: 0 2px 6px rgba(26, 25, 25, 0.454);
+    }
+
+    @keyframes fadeInTop {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInCard {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body class="voice-page">
+
+  <div class="container">
+    <h2>Speak or Type Your Symptoms</h2>
+
+    <p>Select Language:</p>
+    <select id="language-select">
+      <option value="en-US">English</option>
+      <option value="hi-IN">हिन्दी</option>
+      <option value="bn-IN">বাংলা</option>
+      <option value="te-IN">తెలుగు</option>
+      <option value="mr-IN">मराठी</option>
+      <option value="ta-IN">தமிழ்</option>
+      <option value="ur-IN">اردو</option>
+      <option value="gu-IN">ગુજરાતી</option>
+      <option value="kn-IN">ಕನ್ನಡ</option>
+      <option value="ml-IN">മലയാളം</option>
+      <option value="or-IN">ଓଡ଼ିଆ</option>
+      <option value="pa-IN">ਪੰਜਾਬੀ</option>
+      <option value="as-IN">অসমীয়া</option>
+      <option value="mai-IN">मैथिली</option>
+      <option value="sd-IN">سنڌي</option>
+    </select>
+
+    <button id="start-voice">🎤 Record</button>
+    <p id="recognized-text">Your symptoms will appear here...</p>
+
+    <p>Or type your symptoms below:</p>
+    <input type="text" id="manualSymptoms" placeholder="Type your symptoms here..." />
+
+    <button id="submitSymptoms">Submit Symptoms</button>
+  </div>
+
+  <div class="quote-box">
+    "Your voice matters <br>— we're here to listen and help."
+  </div>
+
+  <script src="js/voice.js"></script>
+</body>
+</html>

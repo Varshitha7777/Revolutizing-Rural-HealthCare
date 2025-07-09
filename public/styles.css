@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f5f6fa;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #636cbf;
+  font-weight: 700;
+}
+
+button#logoutBtn {
+  background-color: #636cbf;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button#logoutBtn:hover {
+  background-color: #4a54ae;
+}
+
+#loading {
+  display: none;
+  margin-bottom: 15px;
+  color: #636cbf;
+  font-weight: bold;
+}
+
+#error {
+  display: none;
+  margin-bottom: 15px;
+  color: red;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  /* Add border around table */
+  border: 2px solid #000;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  /* Bold black border between cells */
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  vertical-align: middle;
+  word-break: break-word; /* Break long text like address */
+}
+
+th:last-child, td:last-child {
+  border-right: none; /* No border on last column's right */
+}
+
+thead th {
+  background-color: #636cbf;
+  color: white;
+  font-weight: 600;
+  border-top: 2px solid #000;
+}
+
+tbody tr {
+  border-top: 2px solid #000;
+  transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+  background-color: #f1f3ff;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead tr {
+    display: none;
+  }
+  tr {
+    margin-bottom: 15px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 10px;
+    background: white;
+  }
+  td {
+    padding-left: 50%;
+    position: relative;
+    border: none;
+    border-bottom: 2px solid #000;
+    border-right: none;
+  }
+  td::before {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: 600;
+    content: attr(data-label);
+    color: #636cbf;
+  }
+}

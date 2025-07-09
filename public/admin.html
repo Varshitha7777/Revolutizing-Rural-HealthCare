@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard - Rural Healthcare</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <button id="logoutBtn" aria-label="Logout from admin dashboard">Logout</button>
+  </header>
+
+  <main>
+    <div id="loading" role="status" aria-live="polite" aria-busy="true" style="display:none;">Loading orders...</div>
+    <div id="error" role="alert" style="display:none;"></div>
+
+    <table aria-describedby="orders-desc" role="table" aria-label="Orders table">
+      <h3 id="orders-heading">List of Orders</h3>
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Age</th>
+          <th scope="col">Symptoms</th>
+          <th scope="col">Medicine</th>
+          <th scope="col">Order Time</th>
+        </tr>
+      </thead>
+      <tbody id="orders-body">
+        <!-- Orders will be inserted here dynamically -->
+      </tbody>
+    </table>
+  </main>
+
+  <script src="admin/admin.js"></script>
+</body>
+</html>

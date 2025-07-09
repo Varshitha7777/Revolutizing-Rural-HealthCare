@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Medicare - Redefining healthcare with innovation and empathy." />
+  <meta property="og:title" content="Medicare - Login" />
+  <meta property="og:description" content="Enter your mobile number to receive an OTP." />
+  <meta property="og:image" content="assets/images/preview.png" />
+  <title>Rural Healthcare - Login</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <style>
+    body.login-page {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      color: #080808;
+
+      /* Correct background image path and styling */
+      background: url('assets/index.png') no-repeat center center fixed;
+      background-size: cover;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+    }
+    .login-page .form-area {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 350px;
+      text-align: center;
+      margin-right: calc(50px + 60px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      animation: fadeInCard 1s ease forwards;
+    }
+    .login-page .form-area h1 {
+      color: #636cbf;
+      margin-bottom: 10px;
+      font-size: 2em;
+      font-family: 'Raleway', sans-serif;
+      position: relative;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      animation: fadeInTop 1s ease forwards;
+    }
+    .login-page .form-area p {
+      font-size: 1em;
+      color: #0a0909;
+      margin-bottom: 20px;
+    }
+    .login-page input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+    .login-page input:focus {
+      border-color: #636cbf;
+      outline: none;
+    }
+    .login-page button {
+      background-color: #636cbf;
+      color: white;
+      padding: 3px 7px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      width: 50%;
+    }
+    .login-page button:hover {
+      background-color: #4a54ae;
+      transform: translateY(-2px);
+    }
+    .login-page #otpSection {
+      display: none;
+    }
+    .login-page .top-quote {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-style: italic;
+      color: #000000;
+      font-size: 1em;
+      background-color: rgba(255, 255, 255, 0.555);
+      padding: 10px 15px;
+      border-radius: 8px;
+      max-width: 300px;
+      box-shadow: 0 2px 6px rgba(26, 25, 25, 0.454);
+    }
+    .login-page .logo-container {
+      position: absolute;
+      top: -50px;
+      right: -30px;
+      z-index: 10;
+    }
+    .login-page .logo-container img {
+      height: 230px;
+    }
+    @keyframes fadeInTop {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInCard {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    @media (max-width: 768px) {
+      .login-page .form-area {
+        margin-right: 20px;
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body class="login-page">
+  <div class="logo-container">
+    <img src="assets/bg1.png" alt="Medicare project logo" />
+  </div>
+
+  <div class="form-area">
+    <h1>Welcome to MediCare</h1>
+    <p>Enter your mobile number to receive an OTP.</p>
+    <input type="tel" id="mobile" placeholder="Eg: +91 9876543210" maxlength="14" aria-label="Mobile Number" />
+    <button id="sendOTPBtn" aria-label="Send OTP">Send OTP</button>
+
+    <div id="otpSection">
+      <input type="text" id="otp" placeholder="Enter OTP (6 digits)" maxlength="6" aria-label="OTP" />
+      <button id="verifyOTPBtn" aria-label="Verify OTP">Verify OTP</button>
+    </div>
+  </div>
+
+  <div class="top-quote">
+    “We at Medicare are redefining healthcare<br>with innovation and empathy.”
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
